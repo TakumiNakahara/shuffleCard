@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+    php:
+        image: php:7.2-apache
+        volumes:
+            - .:/var/www/html
+        ports:
+            - 8000:80
+        container_name: php7.2-trial2
+    mysql:
+        platform: linux/x86_64 #Mac M1
+        image: mysql:5.7
+        volumes:
+            - /var/lib/mysql
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=test
+            - MYSQL_USER=test
+            - MYSQL_PASSWORD=test
+        container_name: mysql5.7-trial2
