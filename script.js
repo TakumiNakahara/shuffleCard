@@ -108,7 +108,7 @@ let createUi = function(uidata){
     uidata.forEach((i, index) => {
         let cardContent = "";
         i.forEach(card => {
-            cardContent += `<li class="cards_item"><img src="/img/${card}.png"></li>`;
+            cardContent += `<li class="cards_item"><img src="./img/${card}.png"></li>`;
         });
         let playerHtml = `<div class="player">` +
             ` <p class="player_name">Player${index + 1}</p>` +
